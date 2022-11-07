@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaHalls.Api", "CinemaHalls.Api\CinemaHalls.Api.csproj", "{2A453AFB-C227-4615-A7D4-70721323C42C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaHalls.Api", "CinemaHalls.Api\CinemaHalls.Api.csproj", "{2A453AFB-C227-4615-A7D4-70721323C42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaHalls.BusinessLayer", "CinemaHalls.BusinessLayer\CinemaHalls.BusinessLayer.csproj", "{94B9CF4E-9C72-45B4-A026-B896F7EDE398}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaHalls.DataLayer", "CinemaHalls.DataLayer\CinemaHalls.DataLayer.csproj", "{95FD9E0D-5B7C-46FF-8DF1-587C5F9830C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaHalls.Tests", "CinemaHalls.Tests\CinemaHalls.Tests.csproj", "{9C55020D-CCD8-4A99-9424-E3774BA68B9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaHalls.Common", "CinemaHalls.Common\CinemaHalls.Common.csproj", "{D7B750A2-D9B5-4953-84E6-C7C9588A7A07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{2A453AFB-C227-4615-A7D4-70721323C42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A453AFB-C227-4615-A7D4-70721323C42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A453AFB-C227-4615-A7D4-70721323C42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B9CF4E-9C72-45B4-A026-B896F7EDE398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B9CF4E-9C72-45B4-A026-B896F7EDE398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B9CF4E-9C72-45B4-A026-B896F7EDE398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B9CF4E-9C72-45B4-A026-B896F7EDE398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95FD9E0D-5B7C-46FF-8DF1-587C5F9830C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FD9E0D-5B7C-46FF-8DF1-587C5F9830C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FD9E0D-5B7C-46FF-8DF1-587C5F9830C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FD9E0D-5B7C-46FF-8DF1-587C5F9830C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C55020D-CCD8-4A99-9424-E3774BA68B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C55020D-CCD8-4A99-9424-E3774BA68B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C55020D-CCD8-4A99-9424-E3774BA68B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C55020D-CCD8-4A99-9424-E3774BA68B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B750A2-D9B5-4953-84E6-C7C9588A7A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B750A2-D9B5-4953-84E6-C7C9588A7A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B750A2-D9B5-4953-84E6-C7C9588A7A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B750A2-D9B5-4953-84E6-C7C9588A7A07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
