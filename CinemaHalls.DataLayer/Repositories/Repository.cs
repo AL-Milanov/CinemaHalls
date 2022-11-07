@@ -5,48 +5,46 @@ namespace CinemaHalls.DataLayer.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly DbContext _dbContext;
+        private readonly DbContext _context;
 
         public Repository(DbContext dbContext)
         {
-            _dbContext = dbContext;
+            _context = dbContext;
+            DbSet = _context.Set<T>();
         }
+
+        private DbSet<T> DbSet { get; }
 
         public async Task AddAsync(T entity)
         {
-            await DbSet<T>().AddAsync(entity);
+            await DbSet.AddAsync(entity);
         }
 
         public void DeleteAsync(T entity)
         {
-            DbSet<T>().Remove(entity);
+            DbSet.Remove(entity);
         }
 
         public IQueryable<T> GetAllAsync()
         {
-            return DbSet<T>();
+            return DbSet;
         }
 
         public async Task SaveChangesAsync()
         {
-            await _dbContext.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public async Task<T> UpdateAsync(Guid entityId, T entity)
         {
-            var entityToUpdate = await DbSet<T>().FindAsync(entityId);
+            var entityToUpdate = await DbSet.FindAsync(entityId);
 
             if (entityToUpdate == null)
             {
                 throw new Exception("Placeholder...");
             }
 
-            return DbSet<T>().Update(entity).Entity;
-        }
-
-        private DbSet<T> DbSet<T>() where T : class
-        {
-            return _dbContext.Set<T>();
+            return DbSet.Update(entity).Entity;
         }
     }
 }
