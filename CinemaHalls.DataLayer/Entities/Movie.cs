@@ -19,6 +19,10 @@ namespace CinemaHalls.DataLayer.Entities
         public string Title { get; set; }
 
         [Required]
+        [StringLength(MovieConstraints.TITLE_MAX_LENGTH)]
+        public string NormalizedTitle { get; set; }
+
+        [Required]
         [StringLength(MovieConstraints.DESCRIPTION_MAX_LENGTH)]
         public string Description { get; set; }
 
@@ -35,5 +39,7 @@ namespace CinemaHalls.DataLayer.Entities
         public Category Category { get; set; }
 
         public ICollection<Genre> Genres { get; set; }
+
+        public ICollection<Type> ShowingIn { get; set; }
     }
 }
