@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CinemaHalls.DataLayer.Enumerations;
+using System.ComponentModel.DataAnnotations;
 
 namespace CinemaHalls.DataLayer.Entities
 {
