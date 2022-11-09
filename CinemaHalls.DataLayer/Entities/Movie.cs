@@ -40,6 +40,6 @@ namespace CinemaHalls.DataLayer.Entities
 
         public ICollection<Genre> Genres { get; set; }
 
-        public ICollection<Type> ShowingIn { get; set; }
+        public ICollection<Showing> Showings { get; set; }
     }
 }

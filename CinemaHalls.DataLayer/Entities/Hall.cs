@@ -10,7 +10,7 @@ namespace CinemaHalls.DataLayer.Entities
         }
 
         [Key]
-        public int Number { get; set; }
+        public byte Number { get; set; }
 
         public ICollection<Seat> Seats { get; set; }
     }

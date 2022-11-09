@@ -14,7 +14,7 @@ namespace CinemaHalls.DataLayer.Entities
         public Movie Movie { get; set; }
 
         [ForeignKey(nameof(Hall))]
-        public Guid HallId { get; set; }
+        public byte HallId { get; set; }
 
         public Hall Hall { get; set; }
     }

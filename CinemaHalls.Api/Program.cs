@@ -1,4 +1,10 @@
+using CinemaHalls.DataLayer;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationDbContext>(opt => 
+    opt.UseSqlServer(builder.Configuration.GetSection("MSSQL").Value));
 
 builder.Services.AddControllers();
 
