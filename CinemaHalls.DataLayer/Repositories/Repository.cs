@@ -15,9 +15,11 @@ namespace CinemaHalls.DataLayer.Repositories
 
         private DbSet<T> DbSet { get; }
 
-        public async Task AddAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
-            await DbSet.AddAsync(entity);
+            var addedEntity = await DbSet.AddAsync(entity);
+
+            return addedEntity.Entity;
         }
 
         public void DeleteAsync(T entity)
@@ -35,15 +37,8 @@ namespace CinemaHalls.DataLayer.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<T> UpdateAsync(Guid entityId, T entity)
+        public T Update(T entity)
         {
-            var entityToUpdate = await DbSet.FindAsync(entityId);
-
-            if (entityToUpdate == null)
-            {
-                throw new Exception("Placeholder...");
-            }
-
             return DbSet.Update(entity).Entity;
         }
     }
